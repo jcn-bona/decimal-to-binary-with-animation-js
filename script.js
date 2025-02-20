@@ -3,7 +3,6 @@ const convertBtn = document.getElementById("convert-btn");
 const result = document.getElementById("result");
 const animationContainer = document.getElementById("animation-container");
 
-
 const decimalToBinary = (input) => {
   if (input === 0 || input === 1) {
     setTimeout(() => {
@@ -12,7 +11,7 @@ const decimalToBinary = (input) => {
           decimalToBinary(${input}) + ${input % 2} 
         </p>
       `;
-    }, 500); // addElDelay
+    }, 500); 
 
     return String(input);
   } else {
@@ -22,8 +21,7 @@ const decimalToBinary = (input) => {
           decimalToBinary(${input}) + ${input % 2} 
         </p>
       `;
-    }, 1000 - input * 300); // addElDelay
-
+    }, 1000 - input * 300); 
 
     return decimalToBinary(Math.floor(input / 2)) + (input % 2);
   }
